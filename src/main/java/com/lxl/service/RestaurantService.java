@@ -2,6 +2,9 @@ package com.lxl.service;
 
 import com.lxl.dao.RestaurantRepository;
 import com.lxl.model.Restaurant;
+import org.springframework.stereotype.Service;
+
+import java.util.Collection;
 
 /**
  * @Description: 基于领域模型设计 DDD
@@ -9,6 +12,7 @@ import com.lxl.model.Restaurant;
  * @date: 2018/1/16 22:41
  * @version: V 1.0
  */
+@Service
 public class RestaurantService extends BaseService<Restaurant,String> {
 
     private RestaurantRepository<Restaurant,String> restaurantRepository;
@@ -28,6 +32,14 @@ public class RestaurantService extends BaseService<Restaurant,String> {
             throw new Exception("Restaurant name cannot be null or empty String");
         }
         super.add(restaurant);
+    }
+
+    public Collection<Restaurant> findByName(String name){
+        return null;
+    }
+
+    public Collection<Restaurant> findById(String restaurant_id){
+        return null;
     }
 
 }

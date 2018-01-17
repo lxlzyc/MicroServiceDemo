@@ -2,6 +2,7 @@ package com.lxl.service;
 
 import com.lxl.dao.ReadOnlyRepository;
 import com.lxl.dao.Repository;
+import com.lxl.model.Restaurant;
 
 import java.util.Collection;
 
@@ -26,4 +27,6 @@ public abstract class BaseService<TE,T> extends ReadOnlyBaseService<TE,T>{
     public Collection<TE> getAll(){
         return this.repository.getAll();
     }
+
+
 }
