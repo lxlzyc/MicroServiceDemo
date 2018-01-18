@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
   * @date:
   */
 @SpringBootApplication
+@EnableEurekaServer
 public class Application {
 
     public static void main(String[] args){
