@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
   * @date:
   */
 @SpringBootApplication
-@EnableEurekaServer
+@EnableEurekaServer//注册与发现服务 Eureka服务
 public class Application {
 
     public static void main(String[] args){

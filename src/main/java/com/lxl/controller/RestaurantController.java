@@ -24,6 +24,12 @@ public class RestaurantController {
     @Autowired
     RestaurantService restaurantService;
 
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    public String getIndex(){
+        return "index test success";
+    }
+
+
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<Collection<Restaurant>> findByName(@RequestParam("name") String name){
         Collection<Restaurant>  restaurants = restaurantService.findByName(name);
