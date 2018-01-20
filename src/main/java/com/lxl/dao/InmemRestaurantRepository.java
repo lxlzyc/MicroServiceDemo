@@ -39,8 +39,6 @@ public class InmemRestaurantRepository implements RestaurantRepository<Restauran
             entities.put(entity.getName(),entity);
         }
     }
-
-    @Override
     public boolean CotainsName(String name) {
         return false;
     }
@@ -60,5 +58,10 @@ public class InmemRestaurantRepository implements RestaurantRepository<Restauran
     @Override
     public Collection<Restaurant> getAll() {
         return entities.values();
+    }
+
+    @Override
+    public boolean cotainsName(String name) {
+        return false;
     }
 }

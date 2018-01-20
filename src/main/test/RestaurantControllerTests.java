@@ -22,7 +22,7 @@ import java.util.Collection;
 @SpringBootTest(classes = Application.class)//新版本代替 @SpringApplicationConfiguration
 public class RestaurantControllerTests extends AbstractRestaurantControllerTests{
 
-    protected static class TestRestaurantRepository implements RestaurantRepository<Restaurant,String>{
+    public static class TestRestaurantRepository implements RestaurantRepository<Restaurant,String>{
 
         @Override
         public void add(Restaurant entity) {
