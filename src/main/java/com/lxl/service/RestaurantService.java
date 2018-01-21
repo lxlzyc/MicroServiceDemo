@@ -2,6 +2,7 @@ package com.lxl.service;
 
 import com.lxl.dao.RestaurantRepository;
 import com.lxl.model.Restaurant;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -13,9 +14,12 @@ import java.util.Collection;
  * @version: V 1.0
  */
 @Service
+//@Repository
 public class RestaurantService extends BaseService<Restaurant,String> {
 
     private RestaurantRepository<Restaurant,String> restaurantRepository;
+
+
     public RestaurantService(RestaurantRepository<Restaurant, String> repository) {
         super(repository);
         this.restaurantRepository = repository;

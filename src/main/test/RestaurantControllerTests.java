@@ -4,6 +4,7 @@ import com.lxl.dao.RestaurantRepository;
 import com.lxl.model.Restaurant;
 import com.lxl.service.RestaurantService;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -60,9 +61,20 @@ public class RestaurantControllerTests extends AbstractRestaurantControllerTests
         }
     }
 
+    protected TestRestaurantRepository testRestaurantRepository = new TestRestaurantRepository();
+    protected RestaurantService restaurantService = new RestaurantService(testRestaurantRepository);
+
     @Before
     public void setup(){
-        restaurantController = new RestaurantController();
+        restaurantController = new RestaurantController(restaurantService);
+    }
+
+    @Test
+    public void testIndex(){
+        logger.info("begin index");
+        String index = restaurantController.getIndex();
+        logger.info("result="+index);
+        logger.info("end");
     }
 
 }
