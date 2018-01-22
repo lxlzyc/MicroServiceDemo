@@ -15,18 +15,16 @@ import java.util.Collection;
  */
 @Service
 //@Repository
-public class RestaurantService extends BaseService<Restaurant,String> {
+public class RestaurantService{
 
     private RestaurantRepository<Restaurant,String> restaurantRepository;
 
 
-    public RestaurantService(RestaurantRepository<Restaurant, String> repository) {
-        super(repository);
-        this.restaurantRepository = repository;
+    public RestaurantService() {
+
     }
 
 
-    @Override
     public void add(Restaurant restaurant) throws Exception {
         if(restaurantRepository.cotainsName(restaurant.getName())){
             throw new Exception(String.format("There is already a product with the name -%s",restaurant.getName()));
@@ -35,7 +33,6 @@ public class RestaurantService extends BaseService<Restaurant,String> {
         if(restaurant.getName() == null || "".equals(restaurant.getName())){
             throw new Exception("Restaurant name cannot be null or empty String");
         }
-        super.add(restaurant);
     }
 
     public Collection<Restaurant> findByName(String name){

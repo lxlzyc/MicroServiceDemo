@@ -24,11 +24,6 @@ public class RestaurantController {
     @Autowired
     RestaurantService restaurantService;
 
-    @Autowired
-    public RestaurantController(RestaurantService restaurantService){
-        this.restaurantService = restaurantService;
-    }
-
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String getIndex(){
         return "index test success";

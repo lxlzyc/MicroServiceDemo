@@ -61,14 +61,6 @@ public class RestaurantControllerTests extends AbstractRestaurantControllerTests
         }
     }
 
-    protected TestRestaurantRepository testRestaurantRepository = new TestRestaurantRepository();
-    protected RestaurantService restaurantService = new RestaurantService(testRestaurantRepository);
-
-    @Before
-    public void setup(){
-        restaurantController = new RestaurantController(restaurantService);
-    }
-
     @Test
     public void testIndex(){
         logger.info("begin index");
