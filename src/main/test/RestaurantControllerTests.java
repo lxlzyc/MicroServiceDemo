@@ -1,12 +1,8 @@
-import com.Application;
-import com.lxl.controller.RestaurantController;
+import com.lxl.Application;
 import com.lxl.dao.RestaurantRepository;
 import com.lxl.model.Restaurant;
-import com.lxl.service.RestaurantService;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

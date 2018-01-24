@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * @version: V 1.0
  */
 //@Component //泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注。
-//@EnableDiscoveryClient  //激活eureka中的DiscoveryClient实现
+@EnableDiscoveryClient  //激活eureka中的DiscoveryClient实现
 public class DiscoveryClientSample implements CommandLineRunner{
     protected Logger logger = Logger.getLogger(RestaurantController.class.getName());
 
