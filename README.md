@@ -8,4 +8,4 @@
  * jdk1.8
  * idea 2016
  * maven
- 11
+ 11w
